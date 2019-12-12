@@ -21,3 +21,6 @@ OBS:
     *Posteriormente estarei disponibilizando um script que fará a instalação do software automaticamente.
 
 
+
+Att: Lucas da Silva dos Santos
+
