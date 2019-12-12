@@ -3,14 +3,28 @@ Para ambos os SOs, a versão 3.8 do python não é compatível com as dependênc
 
 Será necessário a instalação das seguintes bibliotecas/APi (excluindo as dependências que cada uma possa ter): 
 
--speech_recognition
--wikipedia
--pyttsx3
--pyaudio
+-SpeechRecognition  |  pip install SpeechRecognition
+-wikipedia          |  pip install  
+-pyttsx3            |  pip install
+-pyaudio            |  sudo apt-get install python-pyaudio
+
+
+
+
+-*-*-*-*-IMPORTANTÍSSIMO:-*-*-*-*-
+
+ 	Caso você esteja usando o Anaconda3 (assim como usei para trabalhar no projeto), provavelmente terá problemas ao executar o pyaudio.
+ 	Depois de muito pesquisar, descobri que provavelmente há uma inconpatibilidade na biblioteca "portaudio" enviada pelo anaconda. 
+ 	Resolvi o problema usando o seguinte comando: conda install nwani::portaudio nwani::pyaudio
+
+ 	Não sei se terão esse problema usando outros meios, porém no anaconda se mostrou necessário.
+
+ 	Aqui está o link em que consegui a resolução do problema, ali acharão maiores detalhes -> https://github.com/ContinuumIO/anaconda-issues/issues/4139
+
+
 
 
 OBS:
-
     ----Windows----
 
     *Como o software foi pensado e programado para o linux, alguns erros de formatação podem ocorrer na leitura do arquivo .csv "dialogos".
