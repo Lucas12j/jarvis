@@ -4,8 +4,8 @@ Para ambos os SOs, a versão 3.8 do python não é compatível com as dependênc
 Será necessário a instalação das seguintes bibliotecas/APi (excluindo as dependências que cada uma possa ter): 
 
 -SpeechRecognition  |  pip install SpeechRecognition
--wikipedia          |  pip install  
--pyttsx3            |  pip install
+-wikipedia          |  pip install  wikipedia
+-pyttsx3            |  pip install pyttsx3
 -pyaudio            |  sudo apt-get install python-pyaudio
 
 

@@ -48,38 +48,3 @@ class Processo(object):
     def reproducao_voz(self, resposta):
         voz = Reprod_Voz.Reprod_Voz(str(resposta))
         voz.reproduzir()
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-        if str(a.captar_voz()) == 'Lucas':
-            print("Olá meu senhor")
-        else:
-            print(a.captar_voz())
-'''
