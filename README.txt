@@ -10,6 +10,12 @@ Será necessário a instalação das seguintes bibliotecas/APi (excluindo as dep
 
 
 
+Será necessário também a instalação de um sintetizador de voz, neste projeto por padrão estou usando o eSpeak, segue o link para dowload do mesmo:
+
+http://espeak.sourceforge.net/download.html
+
+
+
 
 -*-*-*-*-IMPORTANTÍSSIMO:-*-*-*-*-
 
