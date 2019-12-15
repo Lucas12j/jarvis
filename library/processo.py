@@ -20,7 +20,6 @@ class Processo(object):
                 a = Reconh_Voz_Google_Test.Captar_voz()
                 self.reconhecimento(a.captar_voz())
 
-        
     def reconhecimento(self, fala):
         if fala.lower() == 'dormir':
             self.ativo = False
