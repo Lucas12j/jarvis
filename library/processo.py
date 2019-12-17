@@ -6,7 +6,6 @@ class Processo(object):
 
     def __init__(self, dialogo):
         self.dialogo = dialogo
-        self.dh = datetime.Datetime()
         self.ativo = True
         self.soneca = False       
 
@@ -21,6 +20,7 @@ class Processo(object):
                 self.reconhecimento(a.captar_voz())
 
     def reconhecimento(self, fala):
+        dh = datetime.Datetime()
         if fala.lower() == 'dormir':
             self.ativo = False
         elif fala.lower() == 'acordar' and self.ativo == False:
@@ -44,10 +44,10 @@ class Processo(object):
                         self.reproducao_voz(wiki_pesq.pesquisar())
                         check = True
                     elif str(fala) == 'data de hoje' and check != True:
-                        self.reproducao_voz(self.dh.getData())
+                        self.reproducao_voz(dh.getData())
                         check = True
                     elif str(fala) == 'hora' and check != True:
-                        self.reproducao_voz(self.dh.getHora())
+                        self.reproducao_voz(dh.getHora())
                         check = True
                     else:
                         if linha[0].lower() == fala.lower() and check != True:
