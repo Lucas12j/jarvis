@@ -9,7 +9,8 @@ class Cognition(object):
         self.lista_porcentagem = []
         self.palavra = ''
 
-    def separa_palavra(self):
+    def decisao_resposta(self):
+
         for i in self.frase:
             if i != ' ':
                 self.palavra = self.palavra+str(i)
@@ -17,9 +18,9 @@ class Cognition(object):
                 self.lista_palavras.append(self.palavra)
                 self.palavra = ''
         self.lista_palavras.append(self.palavra)
-        self.calcular()
     
-    def calcular(self):
+    #cria uma lista de probabilidade (em forma de porcentagem) de acerto para a resposta que será dada.
+       
         porcent = 0
         with open('Dialogos.csv' ,'r', encoding='utf-8') as dialogo:
             reader = csv.reader(dialogo)
@@ -29,20 +30,17 @@ class Cognition(object):
                         porcent += 1
                 self.lista_porcentagem.append(float(porcent/ len(self.lista_palavras)))
                 porcent = 0
-        self.decisao()
 
-    def decisao(self):
+    #Decide caso haja probabilidades iguais, qual resposta mandar.
+
         maior = 0
         lista_index = []
         index = 0
         aux = 0
-        
         for i in self.lista_porcentagem:
             if i > maior:
                 maior = i
-
         if maior >= 0.5:
-
             for i in self.lista_porcentagem:
                 if i == maior:
                     lista_index.append(index)
@@ -57,4 +55,8 @@ class Cognition(object):
                     else:
                         aux += 1
         else:
-            return("Não entendi o que me disse, adicione vocabulário no meu arquivo Dialogos.csv")
+            return("Não sei do que me disse, me ensine adicionando mais vocabulário")
+'''
+a=Cognition('Lucas kqwg qxk xqljqhkl')
+b = a.separa_palavra()
+print(b)'''
