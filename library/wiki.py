@@ -13,10 +13,8 @@ class Wiki():
         wikipedia.set_lang('pt')
         try:
             l = wikipedia.search(str(self.pesq_usuario), results=1, suggestion=False)
-            self.check = True
             return wikipedia.summary(l, sentences=1, chars=0, auto_suggest= False)
             
         except:
-            self.check = True
             return "Perdão, mas não sei do que se trata essa pesquisa, por favor diga-me algo mais fácil."
             

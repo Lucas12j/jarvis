@@ -7,9 +7,7 @@ class Datetime():
          self.hora=datetime.now()
 
     def getData(self):
-        return str(self.data.day)+"/"+str(self.data.month)+"/"+str(self.data.year)
+        return str(self.data.day)+" do "+str(self.data.month)+" de "+str(self.data.year)
     
     def getHora(self):
-        return str(self.hora.hour)+":"+str(self.hora.minute)+":"+str(self.hora.second)  
-
-        
+        return str(self.hora.hour)+" horas e "+str(self.hora.minute)+" minutos "
