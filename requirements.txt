@@ -3,4 +3,4 @@ SpeechRecognition==3.8.1
 wikipedia==1.4.0
 PyAudio==0.2.11
 Unidecode==1.1.1
-lxml==4.6.2
+lxml==4.6.3
